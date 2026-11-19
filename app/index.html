@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice Cover Maker</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main class="app">
+  <section class="controls">
+    <h1>Vice Cover Maker</h1>
+    <p>Three photos and a caption, made into a GTA-style poster cover. Photos never leave your machine.</p>
+
+    <div class="panel-card" data-card="0">
+      <h2>Panel 1 · Hero</h2>
+      <label>Photo <input type="file" accept="image/*" data-panel="0"></label>
+      <div class="row">
+        <button type="button" data-sample="0">Use sample</button>
+        <label>Zoom <input type="range" min="0.8" max="2.5" step="0.05" value="1" data-zoom="0"></label>
+      </div>
+    </div>
+
+    <div class="panel-card" data-card="1">
+      <h2>Panel 2</h2>
+      <label>Photo <input type="file" accept="image/*" data-panel="1"></label>
+      <div class="row">
+        <button type="button" data-sample="1">Use sample</button>
+        <label>Zoom <input type="range" min="0.8" max="2.5" step="0.05" value="1" data-zoom="1"></label>
+      </div>
+    </div>
+
+    <div class="panel-card" data-card="2">
+      <h2>Panel 3</h2>
+      <label>Photo <input type="file" accept="image/*" data-panel="2"></label>
+      <div class="row">
+        <button type="button" data-sample="2">Use sample</button>
+        <label>Zoom <input type="range" min="0.8" max="2.5" step="0.05" value="1" data-zoom="2"></label>
+      </div>
+    </div>
+
+    <label>Title <input id="title" type="text" maxlength="40" value="Sunset Heist"></label>
+    <label>Subtitle <input id="subtitle" type="text" maxlength="40" value="Vice City · 2026"></label>
+
+    <div class="grades" role="group" aria-label="Colour grade">
+      <button type="button" data-grade="sunset" class="active">Sunset</button>
+      <button type="button" data-grade="neon">Neon Nights</button>
+      <button type="button" data-grade="dusk">Palm Dusk</button>
+    </div>
+
+    <label>Post size
+      <select id="size">
+        <option value="1080x1080">Square · 1080 × 1080</option>
+        <option value="1080x1350">Portrait · 1080 × 1350</option>
+        <option value="1920x1080">Wide · 1920 × 1080</option>
+      </select>
+    </label>
+
+    <div class="row">
+      <button id="samples" type="button">Load samples</button>
+      <button id="export" type="button" class="primary">Export PNG</button>
+    </div>
+    <p class="hint">Click a panel on the cover to select it, then drag it to reposition its photo.</p>
+    <p id="status" role="status"></p>
+  </section>
+  <canvas id="cover" width="1080" height="1080" aria-label="The cover"></canvas>
+</main>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

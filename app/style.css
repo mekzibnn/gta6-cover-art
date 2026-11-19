@@ -1,0 +1,26 @@
+html, body { margin: 0; min-height: 100%; background: #14101d; color: #f2ecf7; font: 15px/1.45 system-ui, sans-serif; }
+.app { display: flex; gap: 28px; align-items: flex-start; justify-content: center; padding: 24px; box-sizing: border-box; }
+.controls { display: flex; flex-direction: column; gap: 14px; width: 300px; flex: none; }
+.controls h1 { margin: 0; font-size: 28px; letter-spacing: 0.5px; background: linear-gradient(90deg, #ff7a18, #ff2e88, #00e5ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.controls p { margin: 0; color: #b9b0c7; }
+.panel-card { border: 1px solid #3a2f4d; border-radius: 10px; padding: 12px; display: flex; flex-direction: column; gap: 8px; background: #1c1529; }
+.panel-card.selected { border-color: #ff2e88; box-shadow: 0 0 0 1px #ff2e88; }
+.panel-card h2 { margin: 0; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: #ffd76a; }
+label { display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 13px; }
+input[type=text], select { font: inherit; padding: 9px; border: 1px solid #4a3d63; border-radius: 6px; background: #241a35; color: #f2ecf7; }
+input[type=file] { font: inherit; font-size: 13px; }
+input[type=range] { width: 110px; accent-color: #ff2e88; }
+.row { display: flex; gap: 10px; align-items: center; }
+.row label { flex-direction: row; align-items: center; }
+button { font: inherit; font-weight: 700; padding: 9px 14px; border: 1px solid #4a3d63; border-radius: 6px; background: #241a35; color: #f2ecf7; cursor: pointer; }
+button:hover { border-color: #ff2e88; }
+button.primary { background: linear-gradient(90deg, #ff7a18, #ff2e88); border: 0; color: #fff; }
+.grades { display: flex; gap: 8px; }
+.grades button.active { background: #ff2e88; border-color: #ff2e88; color: #fff; }
+.hint { font-size: 13px; }
+#status { color: #7ee787; min-height: 1.2em; }
+canvas { width: min(72vh, 62vw); height: auto; max-height: 92vh; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.55); border-radius: 4px; background: #160a24; touch-action: none; cursor: grab; }
+canvas:active { cursor: grabbing; }
+body.shot-cover .controls { display: none; }
+body.shot-cover .app { padding: 0; display: block; }
+body.shot-cover canvas { width: 100vw; height: 100vh; max-height: none; box-shadow: none; border-radius: 0; }
